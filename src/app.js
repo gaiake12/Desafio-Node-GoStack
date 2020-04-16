@@ -16,14 +16,14 @@ app.get("/repositories", (request, response) => {
 
 app.post("/repositories", (request, response) => {
   // TODO
-  const { title, url, techs, likes} = request.body;
+  const { title, url, techs} = request.body;
 
   const repository = {
     id: uuid(),
     title,
     url,
     techs,
-    likes,
+    likes:0,
   }
 
   repositories.push(repository);
